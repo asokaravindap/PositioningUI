@@ -1,0 +1,217 @@
+<html>
+<head>
+  <script src="https://cdn.rawgit.com/konvajs/konva/1.7.6/konva.min.js"></script>
+  <meta charset="utf-8">
+  <title>Localization</title>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+
+    // Setting the stage
+
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var stage = new Konva.Stage({
+      container: 'container',
+      width: 900,
+      height: 650
+    });
+
+    // Adding the text
+
+    var text = new Konva.Text({
+      x: 550,
+      y: 10,
+      fontFamily: 'Calibri',
+      fontSize: 24,
+      text: 'Go over a region',
+      fill: 'black'
+    });
+
+    function writeMessage(message) {
+      text.setText(message);
+      partitionsLayer.draw();
+    }
+    
+    // Adding the polygons
+
+    var partitionsLayer = new Konva.Layer();
+    
+    var part1 = new Konva.Line({
+      points: [101, 98, 218, 99, 218, 252, 99, 252],
+      fill: 'rgba(255,0,0,0.9)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part1.on('mouseover', function() {
+      writeMessage('0.9');
+    });
+    part1.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part2 = new Konva.Line({
+      points: [20, 253, 219, 254, 218, 401, 20, 407],
+      fill: 'rgba(255,0,0,0.6)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part2.on('mouseover', function() {
+      writeMessage('0.6');
+    });
+    part2.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part3 = new Konva.Line({
+      points: [35, 405, 220, 400, 220, 480, 38, 484],
+      fill: 'rgba(255,0,0,0.4)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part3.on('mouseover', function() {
+      writeMessage('0.4');
+    });
+    part3.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part4 = new Konva.Line({
+      points: [219, 209, 219, 444, 335, 447, 335, 411, 414, 413, 414, 207],
+      fill: 'rgba(255,0,0,0.6)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part4.on('mouseover', function() {
+      writeMessage('0.6');
+    });
+    part4.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part5 = new Konva.Line({
+      points: [254, 561, 251, 444, 336, 448, 335, 565],
+      fill: 'rgba(255,0,0,0.3)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part5.on('mouseover', function() {
+      writeMessage('0.3');
+    });
+    part5.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part6 = new Konva.Line({
+      points: [412, 207, 598, 206, 598, 93, 415, 94],
+      fill: 'rgba(255,0,0,0.3)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part6.on('mouseover', function() {
+      writeMessage('0.3');
+    });
+    part6.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part7 = new Konva.Line({
+      points: [415, 410, 413, 207, 600, 206, 600, 409],
+      fill: 'rgba(255,0,0,0.3)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part7.on('mouseover', function() {
+      writeMessage('0.3');
+    });
+    part7.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part8 = new Konva.Line({
+      points: [600, 410, 742, 410, 742, 92, 600, 92],
+      fill: 'rgba(255,0,0,0.2)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part8.on('mouseover', function() {
+      writeMessage('0.2');
+    });
+    part8.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part9 = new Konva.Line({
+      points: [743, 404, 820, 407, 820, 355, 862, 355, 862, 92, 741, 92],
+      fill: 'rgba(255,0,0,0.1)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part9.on('mouseover', function() {
+      writeMessage('0.1');
+    });
+    part9.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+
+    var part10 = new Konva.Line({
+      points: [654, 562, 824, 562, 822, 407, 653, 409],
+      fill: 'rgba(255,0,0,0.1)',
+      stroke: 'black',
+      strokeWidth: 3,
+      closed : true
+    });
+    part10.on('mouseover', function() {
+      writeMessage('0.1');
+    });
+    part10.on('mouseout', function() {
+      writeMessage('Go over a region');
+    });
+    
+    partitionsLayer.add(part1);
+    partitionsLayer.add(part2);
+    partitionsLayer.add(part3);
+    partitionsLayer.add(part4);
+    partitionsLayer.add(part5);
+    partitionsLayer.add(part6);
+    partitionsLayer.add(part7);
+    partitionsLayer.add(part8);
+    partitionsLayer.add(part9);
+    partitionsLayer.add(part10);
+
+    partitionsLayer.add(text);
+    
+    // Setting the floor map
+
+    var floorLayer = new Konva.Layer();
+    var imageObj = new Image();
+    imageObj.src = 'maps/floor.jpg';
+    imageObj.onload = function() {
+      var yoda = new Konva.Image({
+        x: 0,
+        y: 0,
+        image: imageObj,
+        width: 900,
+        height: 650
+      });
+      floorLayer.add(yoda);
+      stage.add(floorLayer);
+
+      stage.add(partitionsLayer);
+    };
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="900" height="650" style="border:1px solid #d3d3d3;"/>
+<img id="scream" src="maps/floor.jpg" alt="The Scream" width="900" height="650">
+
+<script>
+
+window.onload = function() {
+  var c=document.getElementById("myCanvas");
+  var ctx=c.getContext("2d");
+  var img=document.getElementById("scream");  
+  ctx.drawImage(img,0,0);  
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.9)";
+  context.moveTo(101, 98);
+  context.lineTo(218, 99);
+  context.lineTo(218, 252);
+  context.lineTo(99, 252);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+  this.clicked=function(){
+      context.fillStyle='#ff0000'
+      context.fill();
+  }
+
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.6)";
+  context.moveTo(20, 253);
+  context.lineTo(219, 254);
+  context.lineTo(218, 401);
+  context.lineTo(20, 407);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.4)";
+  context.moveTo(35, 405);
+  context.lineTo(220, 400);
+  context.lineTo(220, 480);
+  context.lineTo(38, 484);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.6)";
+  context.moveTo(219, 209);
+  context.lineTo(219, 444);
+  context.lineTo(335, 447);
+  context.lineTo(336, 411);
+  context.lineTo(414, 413);
+  context.lineTo(414, 207);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.3)";
+  context.moveTo(254, 561);
+  context.lineTo(251, 444);
+  context.lineTo(336, 448);
+  context.lineTo(335, 565);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.3)";
+  context.moveTo(412, 207);
+  context.lineTo(598, 206);
+  context.lineTo(598, 93);
+  context.lineTo(415, 94);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.3)";
+  context.moveTo(415, 410);
+  context.lineTo(413, 207);
+  context.lineTo(600, 206);
+  context.lineTo(600, 409);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.2)";
+  context.moveTo(600, 410);
+  context.lineTo(742, 410);
+  context.lineTo(742, 92);
+  context.lineTo(600, 92);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.1)";
+  context.moveTo(743, 404);
+  context.lineTo(820, 407);
+  context.lineTo(820, 355);
+  context.lineTo(862, 355);
+  context.lineTo(862, 92);
+  context.lineTo(741, 92);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "rgba(255, 0, 0, 0.1)";
+  context.moveTo(654, 562);
+  context.lineTo(824, 562);
+  context.lineTo(822, 407);
+  context.lineTo(653, 409);
+  context.closePath();
+  context.fill();
+  context.lineWidth = 1;
+  context.strokeStyle = 'black';
+  context.stroke();
+  
+
+}
+
+</script>
+
+</body>
+</html>

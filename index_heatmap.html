@@ -1,0 +1,69 @@
+    <!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Vortex</title>
+  <meta name="description" content="Data Visualization Vault">
+  <script type="text/javascript" src="js/heatmap.min.js"></script>
+</head>
+
+<body>
+
+      <div style="position: relative; height: 800px; width: 800px;" class="heatmap">
+      </div>
+<script type="text/javascript">
+var heatmapInstance = h337.create({
+  container: document.querySelector('.heatmap')
+});
+
+var points = [];
+var max = 0;
+var width = 800;
+var height = 800;
+var len = 20 * 20;
+
+var idx = 0;
+
+while (len--) {
+
+  idx = idx + 40;
+
+  //var val = idx + 100;
+  //max = Math.max(max, val);
+
+  var point = {
+    x: idx % 800,
+    y: Math.ceil(idx / 800) * 40,
+    value: 50
+  };
+
+  // get the average
+
+  var totalx = 0;
+  var totaly = 0;
+  
+  for(var i = 0; i < points.length; i++) {
+     totalx += points[i].x;
+     totaly += points[i].y;
+  }
+  var avgx = totalx / points.length;
+  var avgy = totaly / points.length;
+
+  // burn the center
+  
+
+  // add to the points
+  points.push(point);
+}
+
+var data = { 
+  max: 50, 
+  data: points 
+};
+// if you have a set of datapoints always use setData instead of addData
+// for data initialization
+heatmapInstance.setData(data);
+</script>
+</body>
+</html>
